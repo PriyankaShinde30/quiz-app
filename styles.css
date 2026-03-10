@@ -49,27 +49,12 @@ body{
   box-shadow:0 4px 20px rgba(0,0,0,0.1);
 }
 
-/* icon */
-.icon-box{
-  width:70px;
-  height:70px;
-  background:#e8eefc;
-  margin:auto;
-  border-radius:16px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:30px;
-  margin-bottom:20px;
-}
-
 .description{
   color:#6b7280;
   font-size:14px;
   margin-top:10px;
 }
 
-/* question info */
 .quiz-info{
   display:flex;
   justify-content:center;
@@ -96,7 +81,6 @@ body{
   background:#d1d5db;
 }
 
-/* high score */
 .high-score-box{
   background:#f1f3f6;
   padding:15px;
@@ -113,7 +97,6 @@ body{
   margin-top:5px;
 }
 
-/* start button */
 .start-btn{
   width:100%;
   margin-top:25px;
