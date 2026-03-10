@@ -1,13 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QUIZ</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <h1>QUIZ APPLICATION</h1>
+    <div id="start-screen">
+      <div class="heading">
+        <h3>JavaScript Quiz Challenge</h3>
+      </div>
+      <div class="desc">
+        <p>
+          Test your JavaScript knowledge with 10 carefully crafted<br />
+          questions covering fundamentals, ES6+, and more.
+        </p>
+      </div>
+      <div class="details">
+        <h4>10<br />Questions</h4>
+        <h4>30s<br />Per Question</h4>
+      </div>
+      <div class="btn">
+        <button id="start-btn">Start Quiz</button>
+      </div>
+    </div>
+    <div id="quiz-screen" class="hidden">
+      <div class="quiz-header">
+        <p id="progress">Question 1 of 10</p>
+        <span id="timer">30s</span>
+      </div>
+      <div class="question-container">
+        <h2 id="question">Question</h2>
+        <div id="options"></div>
+      </div>
+      <div class="btn">
+        <button id="next-btn">Next Question</button>
+      </div>
+    </div>
+    <div id="result-screen" class="hidden">
+      <img src="./trophy_78370-345.avif" alt="Trophy" />
+      <h4>Congratulations!</h4>
+      <p id="score-text">
+        Good you have got very much knowledge of JavaScript. Keep Practicing
+      </p>
+      <div class="score-circle">score circle element</div>
+      <div class="high-score">high score element</div>
+      <div class="btn">
+        <button id="restart-btn">Restart Quiz</button>
+      </div>
+    </div>
     <script type="module" src="app.js"></script>
-</body>
+  </body>
 </html>

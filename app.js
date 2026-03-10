@@ -1,3 +1,5 @@
 import { questions } from "./questions.js";
 
-console.log(questions[1]);
+let currentQuestionIndex = 0;
+let score = 0;
+
