@@ -85,6 +85,7 @@ function showQuestion() {
   });
 
   clearInterval(timer);
+  timeLeft = 30;
   startTimer();
 }
 
