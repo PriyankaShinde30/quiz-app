@@ -96,7 +96,6 @@ function handleAnswerClick(event) {
 
   if (!selectedButton) return;
 
-  // prevent multiple selections
   if (optionsContainer.classList.contains("answered")) return;
   optionsContainer.classList.add("answered");
   clearInterval(timer);
