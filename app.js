@@ -18,6 +18,22 @@ const scoreText = document.getElementById("score-text");
 
 let currentQuestionIndex = 0;
 let score = 0;
+let timeLeft = 30;
+let timer;
+
+function startTimer(){
+    timerElement.textContent = `${timeLeft}s`;
+
+    timer = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = `${timeLeft}s`;
+
+        if(timeLeft == 0){
+            clearInterval(timer);
+            nextQuestion();
+        }
+    },1000);
+}
 
 startBtn.addEventListener("click", startQuiz);
 
@@ -53,11 +69,15 @@ function showQuestion() {
 
     optionsContainer.appendChild(button);
   });
+
+  clearInterval(timer);
+  startTimer();
 }
 
 optionsContainer.addEventListener("click", handleAnswerClick);
 
 function handleAnswerClick(event) {
+    clearInterval(timer);
   const selectedButton = event.target;
 
   const selectedIndex = Number(selectedButton.dataset.index);
@@ -96,8 +116,9 @@ function nextQuestion(){
 }
 
 function showResult(){
+    clearInterval(timer);
     quizScreen.classList.add("hidden");
-    restartBtn.classList.remove("hidden");
+    result.classList.remove("hidden");
     scoreText.textContent = `You Scored ${score} out of ${questions.length}`;
 }
 
